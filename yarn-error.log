@@ -1,0 +1,57 @@
+Arguments: 
+  /home/rajasegar/.nvm/versions/node/v15.2.0/bin/node /home/rajasegar/.nvm/versions/node/v15.2.0/bin/yarn
+
+PATH: 
+  /home/rajasegar/.nvm/versions/node/v15.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  15.2.0
+
+Platform: 
+  linux arm64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:67:26)
+
+npm manifest: 
+  {
+    "name": "@web/demo-glimmer",
+    "version": "0.0.0",
+    "private": true,
+    "license": "MIT",
+    "main": "index.js",
+    "scripts": {
+      "start": "web-dev-server --open demo/ --node-resolve",
+      "start:watch": "web-dev-server --open demo/ --node-resolve --watch",
+      "test": "web-test-runner test/**/*.test.jsx",
+      "test:watch": "web-test-runner test/**/*.test.jsx --watch"
+    },
+    "dependencies": {
+      "@glimmerx/component": "^0.2.5",
+      "@glimmerx/core": "^0.2.5",
+      "react": "npm:@pika/react@16.13.1",
+      "react-dom": "npm:@pika/react-dom@16.13.1"
+    },
+    "devDependencies": {
+      "@babel/plugin-proposal-class-properties": "^7.12.1",
+      "@babel/plugin-proposal-decorators": "^7.12.1",
+      "@babel/preset-env": "^7.12.7",
+      "@esm-bundle/chai": "4.1.5",
+      "@glimmerx/babel-plugin-component-templates": "^0.2.5",
+      "@rollup/plugin-babel": "^5.2.1",
+      "@web/dev-server": "0.0.25",
+      "@web/dev-server-esbuild": "0.2.6",
+      "@web/dev-server-rollup": "^0.2.11",
+      "@web/test-runner": "0.10.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
