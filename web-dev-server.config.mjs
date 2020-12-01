@@ -2,13 +2,13 @@ import { esbuildPlugin } from "@web/dev-server-esbuild";
 import { fromRollup } from '@web/dev-server-rollup';
 import * as babelModule from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
-//import image from '@rollup/plugin-image';
+import image from '@rollup/plugin-image';
 import path from 'path';
 
 const { babel } = babelModule;
 const babelPlugin = fromRollup(babel);
 const postcssPlugin = fromRollup(postcss);
-//const imagePlugin = fromRollup(image);
+const imagePlugin = fromRollup(image);
 
 export default {
   nodeResolve: true,
@@ -23,11 +23,12 @@ export default {
     }),
     postcssPlugin({
       include: ['src/**/*.css'], 
-      extract: true
+      modules: true
     }),
-    //imagePlugin()
+    imagePlugin()
   ],
   mimeTypes: {
-    '**/*.css': 'js'
+    '**/*.css': 'js',
+    '**/*.svg': 'js'
   }
 };

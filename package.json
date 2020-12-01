@@ -26,7 +26,9 @@
     "@web/dev-server-esbuild": "0.2.6",
     "@web/dev-server-rollup": "^0.2.11",
     "@web/test-runner": "0.10.0",
-    "rollup-plugin-css-only": "^3.0.0",
     "rollup-plugin-postcss": "^3.1.8"
+  },
+  "engines": {
+    "node" : "14.x"
   }
 }
