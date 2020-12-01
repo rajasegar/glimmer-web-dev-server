@@ -1,9 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { renderComponent } from '@glimmerx/core';
 
-export function fixture(jsx) {
+export function fixture(component) {
   const wrapper = document.createElement('div');
-  ReactDOM.render(jsx, wrapper);
+  renderComponent(component, wrapper);
   return {
     element: wrapper.firstElementChild,
     restoreFixture: () => wrapper.remove(),

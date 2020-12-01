@@ -1,13 +1,12 @@
-import React from 'react';
 import { expect } from '@esm-bundle/chai';
-import App from '../src/App';
+import HelloWorld from '../src/HelloWorld';
 import { fixture } from './test-helpers';
 
 let element;
 let restoreFixture;
 
 beforeEach(() => {
-  ({ element, restoreFixture } = fixture(<App />));
+  ({ element, restoreFixture } = fixture(HelloWorld));
 });
 
 afterEach(() => {
